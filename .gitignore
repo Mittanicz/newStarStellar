@@ -1,0 +1,4 @@
+cache/
+node_modules/
+includes/config.php
+includes/error.log

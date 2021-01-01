@@ -1,0 +1,16 @@
+.c-table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    clear: both;
+    empty-cells: show;
+    width: 100%;
+
+    th{
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    td{
+        padding: 10px;
+    }
+}

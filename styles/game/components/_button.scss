@@ -1,0 +1,114 @@
+.c-btnWrapper{
+    display: flex;
+
+    .c-btn + .c-btn{
+        margin-left: 10px;
+    }
+}
+
+.c-btn{
+    border: 1px solid $green;
+    text-align: center;
+    position: relative;
+    padding: 5px 38px;
+    text-transform: uppercase;
+    background: $darkGreen;
+    color: $white;
+    transition: $transition;
+    text-decoration: none;
+    display: inline-block;
+    
+    &:hover{
+        transition: $transition;
+        background: $darkOrange;
+        border: 1px solid $orange;
+
+        .top-corner{
+            &:before{
+                left: 10px;
+                right: 10px;
+                background: $lightOrange;
+                transition: $transition;
+            }
+
+            &:after{
+                left: 10px;
+                right: 10px;
+                background: $lightOrange;
+                transition: $transition;
+            }
+        }
+
+        .bottom-corner{
+            &:before{
+                top: 10px;
+                bottom: 10px;
+                background: $lightOrange;
+                transition: $transition;
+            }
+            &:after{
+                top: 10px;
+                bottom: 10px;
+                background: $lightOrange;
+                transition: $transition;
+            }
+        }
+    }
+
+    .top-corner{
+        &:before{
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: $green;
+            transition: $transition;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: $green;
+            transition: $transition;
+        }
+    }
+
+    .bottom-corner{
+        &:before{
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: $green;
+            transition: $transition;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: $green;
+            transition: $transition;
+        }
+    }
+}
+
+.c-btn--block{
+    display: block;
+    width: 100%;
+}
+
+.c-btn--small{
+    padding: 0 5px;
+}

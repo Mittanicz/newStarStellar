@@ -1,0 +1,91 @@
+.l-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: $gradientBackground;
+    border-bottom: 1px solid #274635;
+    z-index: 60;
+
+    @include tablet{
+        padding: 0 10px;
+    }
+}
+
+.l-header__logo{
+    font-size: 22px;
+    color: $white;
+
+    @include tablet{
+        order: 1;
+    }
+}
+
+.l-header__button{
+    width: 30px;
+    padding-left: 10px;
+    position: relative;
+    cursor: pointer;
+
+    .line{
+        display: block;
+        background-color: $white;
+        height: 2px;
+        width: 18px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        transition: $transition;
+    }
+
+    &:hover{
+        .line{
+            width: 25px;
+            transition: $transition;
+        }
+    }
+
+    .line--big{
+        width: 25px;
+    }
+
+    &.is-open{
+        .line{
+            transform: rotate(135deg);
+            width: 20px;
+            
+            &:last-child{
+                transform: rotate(-135deg);
+                transform: rotate(-135deg);
+                position: absolute;
+                top: 0;
+            }
+        }
+        .line--big{
+            opacity: 0;
+            transition: $transition;
+        }
+    }
+
+    @include tablet{
+        display: none;
+    }
+}
+
+.l-header__link{
+    padding-right: 5px;
+    color: $white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+
+    @include tablet{
+        display: none;
+    }
+
+}

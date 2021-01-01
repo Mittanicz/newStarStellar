@@ -1,0 +1,30 @@
+.l-panel{
+    display: none;
+
+    @include tablet{
+        background: $gradientBackgroundTransition;
+        border-right: 1px solid $greenBorderColor;
+        display: block;
+        left: 0;
+        position: fixed;
+        top: 45px;
+
+        &:before{
+            bottom: -42px;
+            content: '';
+            position: absolute;
+            @include triangle("topleft", rgba(36,55,47,.8), 42px)
+        }
+
+        &:after{
+            background: $greenBorderColor;
+            bottom: -50px;
+            content: '';
+            height: 59px;
+            left: 19px;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 1px;
+        }
+    }
+}

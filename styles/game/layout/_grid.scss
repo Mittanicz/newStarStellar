@@ -1,0 +1,30 @@
+.l-grid{
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto;
+}
+
+.l-grid--mansory{
+    background: $darkBackgroundTransparent;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    
+    @include tablet{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    @include desktop{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 110px 110px 110px;
+        grid-template-columns: 140px 140px 140px;
+    }
+}
+
+
+.l-grid--table{
+    display: flex;
+    grid-column-gap: initial;
+    grid-template-columns: initial;
+}

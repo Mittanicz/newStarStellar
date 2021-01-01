@@ -1,0 +1,32 @@
+.c-queue{
+    display: flex;
+}
+
+.c-queue--first{
+    display: flex;
+
+    @include desktop{
+        order: 1;
+        margin-bottom: 10px;
+    }
+}
+
+.c-queue__wrapper{
+    display: flex;
+    align-items: center;
+}
+.c-queue__action{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+.c-queue__data{
+    @include desktop{
+        flex: 1 1;
+    }
+}
+
+.c-visualProgress{
+    
+}

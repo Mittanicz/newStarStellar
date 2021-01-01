@@ -1,0 +1,71 @@
+.l-queueBox{
+    background: $gradientBackgroundDarkTranstion;
+    border-bottom: 1px solid $greenBorderColor;
+    border-left: 1px solid $greenBorderColor;
+    border-top: 1px solid $greenBorderColor;
+    bottom: 150px;
+    padding: 5px;
+    position: fixed;
+    right: 0;
+    z-index: 400;
+}
+
+.l-queueBox--desktop{
+    border-right: 1px solid $greenBorderColor;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    position: relative;
+    right: auto;
+}
+
+.l-queueBox__content{
+    .ul-list{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .ul-list__item{
+        border-bottom: 1px solid $greenBorderColor;
+        padding-bottom: 5px;
+
+        @include desktop{
+            margin-bottom: 10px;
+        }
+    }
+
+    @include desktop{
+        order: 2;
+    }
+}
+
+.l-queueBox__title{
+    display: none;
+
+    .l-queueBox--desktop &,
+    .c-card__contentInfo--desktop &{
+        display: block;
+        margin-bottom: 20px;
+        order: 1;
+        text-align: center;
+    }
+
+}
+
+.l-queueBox__select{
+    background: $darkBackgroundTransparent;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    width: 100%;
+    
+    &::-webkit-scrollbar-track{
+        background: $darkBackground;
+    }
+
+    option{
+        background: $darkBackgroundTransparent;
+        color: white;
+    }
+}

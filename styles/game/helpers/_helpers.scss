@@ -1,0 +1,47 @@
+.u-text-center{
+    text-align: center !important;
+}
+
+.u-text-right{
+    text-align: right !important;
+}
+
+.u-text-left{
+    text-align: left !important;
+}
+
+.u-content-center{
+    display: flex;
+    justify-content: center;
+}
+
+.u-vhide{
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.u-colorSuccess{
+    color: $greenBorderColor;
+}
+
+.u-colorWarning{
+    color: $orange;
+}
+
+.u-colorError{
+    color: $red;
+}
+
+$size:0;
+@while $size < 60 {
+    .u-mb-#{$size} { margin-bottom: $size + px; }
+    $size: $size + 5;
+}
+
+.u-ml-10{
+    margin-left: 10px !important;
+}

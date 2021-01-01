@@ -1,0 +1,75 @@
+.ul-nav{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background: #0f1b17;
+    top: 60px;
+    transition: $transition;
+
+    &.is-open{
+        display: flex;
+        height: 100vh;
+        transition: $transition;
+    }
+
+    @include tablet{
+        position: relative;
+        top: auto;
+        height: auto;
+        width: auto;
+        order: 2;
+
+        &.is-open{
+            height: auto;
+        }
+    }
+}
+
+.ul-nav__list{
+    list-style: none;
+    padding: 0 50px 20px;
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    
+    .is-open &{
+        opacity: 1;
+        visibility: visible;
+        transition: $transition;
+    }
+
+    @include tablet{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+}
+
+.ul-nav__item{
+    padding: 0;
+    margin: 0;
+}
+
+.ul-nav__link{
+    padding: 15px;
+    display: inline-block;
+    color: $white;
+    font-size: 22px;
+    text-decoration: none;
+    width: 100%;
+    transition: $transition;
+    
+    &:hover{
+        text-decoration: none;
+        color: $white;
+        transition: $transition;
+    }
+    
+    @include tablet{
+        font-size: 18px;
+        padding: 0 5px;
+    }
+}

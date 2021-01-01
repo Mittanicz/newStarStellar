@@ -1,0 +1,71 @@
+.c-progress{
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 70px;
+    position: relative;
+}
+
+.c-progress__bar{
+    background: $white;
+    height: 4px;
+    left: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 90%;
+}
+
+.c-progress__text{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-progress__icon{
+    display: block;
+    height: 10px;
+    width: 10px;
+}
+
+.c-progress__barBg{
+    background: $triangleGreen;
+    height: 10px;
+    position: relative;
+    width: 100%;
+
+    .c-progress__barLeft,
+    .c-progress__barRight{
+        background: yellow;
+        height: 4px;
+        max-width: 47%;
+    }
+    .c-progress__barRight{
+        left: 50%;
+        position: absolute;
+    }
+}
+
+.c-progress__extended{
+    background: $triangleGreen;
+    bottom: -10px;
+    font-size: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    
+    &:before{
+        content: '';
+        left: -10px;
+        position: absolute;
+        top: 0;
+        @include triangle("topright", $triangleGreen, 10px)
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        right: -10px;
+        top: 0;
+        @include triangle("topleft", $triangleGreen, 10px)
+    }
+}

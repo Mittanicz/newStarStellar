@@ -1,0 +1,31 @@
+.c-dropdown{
+    position: relative;
+}
+
+.c-dropdown__content{
+    min-width: 160px;
+    opacity: 0;
+    padding: 15px;
+    position: absolute;
+    transition: $transition;
+    visibility: hidden;
+    z-index: 1;
+
+    .is-show &{
+        opacity: 1;
+        transition: $transition;
+        visibility: visible;
+    }
+    .ul-nav__link{
+        margin-bottom: 10px;
+    }
+
+    @include tablet{
+        background: $gradientBackground;
+        border: 1px solid $lightGreen;
+    }
+}
+
+.c-dropdown__content--header{
+    top: 39px;
+}

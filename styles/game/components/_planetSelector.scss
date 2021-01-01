@@ -1,0 +1,74 @@
+.c-planetSelector{
+    background: $inputBackground;
+    border: 1px solid $lightGreen;
+    display: flex;
+    justify-content: center;
+    min-width: 150px;
+    padding: 5px;
+    position: relative;
+}
+
+.c-planetSelector__before{
+    background: $inputBackground;
+    height: 17px;
+    left: -10px;
+    position: absolute;
+    top: -1px;
+    width: 10px;
+
+    &:before{
+        bottom: -10px;
+        content: '';
+        left: 0;
+        position: absolute;
+        @include triangle("topright", $inputBackground, 10px)
+    }
+}
+
+.c-planetSelector__after{
+    background: $inputBackground;
+    height: 17px;
+    position: absolute;
+    right: -10px;
+    top: 9px;
+    width: 10px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -10px;
+        @include triangle("bottomleft", $inputBackground, 10px)
+    }
+}
+
+.c-planetSelector__active{
+    align-items: center;
+    display: flex;
+
+    img{
+        margin-right: 10px;
+    }
+
+    span{
+        margin-left: 5px;
+    }
+}
+
+.c-planetSelector__list{
+    left: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 26px;
+    z-index: 99;
+}
+
+.c-planetSelector__item{
+    border-bottom: 1px solid $lightGreen;
+    padding: 5px;
+
+    &.is-active{
+        background: $inputBackground;
+    }
+}

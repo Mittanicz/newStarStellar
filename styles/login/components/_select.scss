@@ -1,0 +1,81 @@
+ .c-select {
+    position: relative;
+
+    select{
+        display: none;
+    }
+}
+  
+.c-select__selected {
+    background: $inputBackground;
+    font-size: 14px;
+    padding: 13px 16px;
+
+    &:after{
+        border: 6px solid transparent;
+        border-color: $white transparent transparent transparent;
+        content: "";
+        height: 0;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        transition: $transition;
+        width: 0;
+    }
+
+    &.c-select__arrow:after {
+        border-color: transparent transparent $white transparent;
+        top: 15px;
+        transition: $transition;
+    }
+}
+  
+.c-select__list{
+    left: 0;
+    list-style: none;
+    margin: 0;
+    max-height: 150px;
+    opacity: 1;
+    overflow-y: scroll;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transition: $transition;
+    visibility: visible;
+    z-index: 99;
+}
+
+.c-select__item{
+    background: $inputBackground;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 17px;
+    padding: 12px;
+    transition: $transition;
+
+    &:hover{
+        background: $darkGreen;
+        transition: $transition;
+    }
+}
+.c-select__selected{
+    color: $white;
+    padding: 13px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.c-select__same{
+    background: $black;
+    padding: 11px;
+    font-size: 14px;
+    border: 1px solid $orange;
+}
+
+.c-select__hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition;
+}

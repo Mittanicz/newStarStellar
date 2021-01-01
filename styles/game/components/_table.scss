@@ -1,0 +1,68 @@
+.c-table{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th{
+        text-align: center;
+        padding: 5px;
+        border-bottom: 1px solid $greenBorderColor;
+    }
+
+    td{
+        padding: 5px;
+        background: $gradientBackground;
+        border-bottom: 1px solid $greenBorderColor;
+    }
+}
+
+.c-table--fullWidth{
+    width: 100%;
+}
+
+.c-table--spacing{
+    border-spacing: 0px 5px;
+    border-collapse: separate;
+    background: $gradientBackgroundDarkTranstion;
+
+    tr{
+        td{
+            border-top: 1px solid $greenBorderColor;
+            border-bottom: 1px solid $greenBorderColor;
+            transition: $transition;
+            vertical-align: middle;
+            width: 45px;
+            height: 36px;
+
+            &:first-child{
+                border-left: 1px solid $greenBorderColor;
+                transition: $transition;
+            }
+
+            &:last-child{
+                border-right: 1px solid $greenBorderColor;
+                transition: $transition;
+            }
+        }
+
+        &:hover{
+            td{
+                border-top: 1px solid $orange;
+                border-bottom: 1px solid $orange;
+                transition: $transition;
+                
+                &:first-child{
+                    border-left: 1px solid $orange;
+                    transition: $transition;
+                }
+
+                &:last-child{
+                    border-right: 1px solid $orange;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}

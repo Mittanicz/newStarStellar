@@ -1,0 +1,28 @@
+.c-modal{
+    background: $gradientBackgroundTransition;
+    border: 1px solid #26352f;
+    left: 50%;
+    max-width: 560px;
+    min-width: 330px;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    @include tablet{
+        max-width: 780px;
+        min-width: 560px;
+    }
+}
+
+.c-modal__close{
+    cursor: pointer;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+}

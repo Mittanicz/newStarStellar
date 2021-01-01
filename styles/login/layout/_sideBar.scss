@@ -1,0 +1,45 @@
+.l-sideBar{
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    width: 360px;
+    right: 0;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    background: #0f1b17;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    transition: $transition;
+
+    &.is-open{
+        transform: translateX(0);
+    }
+    @include mobile{
+        width: 460px;
+    }
+}
+
+.l-sideBar__close{
+    position: absolute;
+    border: 1px solid #6afadc;
+    color: #6afadc;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: $transition;
+    
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active{
+        border: 1px solid #ff9650;
+        color: #ff9650;
+        transition: $transition;
+    }
+}

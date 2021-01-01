@@ -1,0 +1,11 @@
+.c-requirerment{
+    position: relative;
+}
+
+.c-requirerment__text{
+    position: absolute;
+    padding: 2px;
+    top: 8px;
+    right: 4px;
+    background: $gradientBackgroundTransition;
+}

@@ -1,0 +1,37 @@
+.ul-nav{
+    overflow-x: scroll;
+    margin-bottom: -10px;
+    padding-bottom: 5px;
+}
+.ul-navList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-left: -5px;
+}
+
+.ul-navList__item{
+    margin-left: 5px;
+    padding: 5px;
+    border: 1px solid $green;
+    transition: $transition;
+    
+    &:hover,
+    &:focus,
+    &:active{
+        border: 1px solid $orange;
+        transition: $transition;
+
+    }
+
+}
+
+.ul-navList__link{
+    display: block;
+}
+
+.ul-sideNav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,204 @@
+.c-card{
+    min-width: 280px;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 30px;
+
+    @include mobile{
+        max-width: 500px;
+
+        &:before{
+            background: $gradientBackground;
+            content: '';
+            height: 28px;
+            left: 70%;
+            position: absolute;
+            right: 0;
+            top: 21px;
+        }
+
+        &:after{
+            background: $lightGreen;
+            content: '';
+            height: 1px;
+            left: 74%;
+            position: absolute;
+            right: 0;
+            top: 20px;
+        }
+    }
+
+    @include tablet{
+        max-width: 680px;
+
+        &:before{
+            height: 48px;
+        }
+
+        &:after{
+            left: 73%;
+        }
+    }
+}
+
+
+.c-card__header{
+    background: $gradientBackground;
+    border-left: 1px solid $lightGreen;
+    border-top: 1px solid $lightGreen;
+    font-size: 26px;
+    padding: 10px;
+    position: relative;
+    
+    @include mobile{  
+        font-size: 28px;  
+        max-width: 70%;
+
+        &:before{
+            content: '';
+            position: absolute;
+            right: -22px;
+            top: -2px;
+            @include triangle("bottomleft", $triangleGreen, 22px)
+        }
+
+        &:after{
+            background: $lightGreen;
+            content: '';
+            height: 1px;
+            position: absolute;
+            right: -25px;
+            top: 10px;
+            transform: rotate(45deg);
+            width: 28px;
+        }
+    }
+
+    h1{
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @include tablet{
+        padding: 20px;
+    }
+}
+
+.c-card__content{
+    background: linear-gradient(180deg, $triangleGreen 0%, $triangleGreen2 100%);
+    border: 1px solid $lightGreen;
+    border-top: 0;
+    padding: 15px;
+    position: relative;
+
+    &:before{
+        background: $lightGreen;
+        content: '';
+        height: 30px;
+        position: absolute;
+        right: -1px;
+        top: -29px;
+        width: 1px;
+    }
+
+    @include tablet{
+        padding: 10px 20px 20px;
+
+        &:before{
+            height: 48px;
+            top: -48px;
+        }
+    }
+}
+
+
+.c-card--center{
+    @include mobile{
+        .c-card__header{
+            text-align: center;
+            margin: 0 auto;
+            border-left: 0;
+        }
+
+        &:before{
+            left: 85%;
+        }
+
+        &:after{
+            left: 88%;
+        }
+
+        .c-card__border{
+            &:before{
+                content: '';
+                position: absolute;
+                left: -22px;
+                top: -2px;
+                @include triangle("bottomright", $triangleGreen, 22px)
+            }
+
+            &:after{
+                background: $lightGreen;
+                content: '';
+                height: 1px;
+                position: absolute;
+                left: -25px;
+                top: 10px;
+                transform: rotate(-45deg);
+                width: 28px;
+            }
+        }
+
+        .c-card__contentBorder{
+            background: linear-gradient(180deg,$triangleGreen 0,$triangleGreen 100%);
+            height: 28px;
+            left: 0;
+            position: absolute;
+            right: 85%;
+            top: -28px;
+
+            &:before{
+                background: $lightGreen;
+                content: '';
+                height: 30px;
+                position: absolute;
+                left: -1px;
+                top: 0;
+                width: 1px;
+            }
+            &:after{
+                background: $lightGreen;
+                content: '';
+                height: 1px;
+                position: absolute;
+                width: 72%;
+            }
+        }
+    }
+
+    @include tablet{
+        .c-card__contentBorder{
+            top: -48px;
+            height: 48px;
+
+            &:before{
+                height: 48px;
+            }
+
+            &:after{
+                width: 79%;
+            }
+        }
+    }
+}
+.c-card--alignCenter{
+    margin: 0 auto;
+}
+.c-card__innerContent{
+    border: 1px solid $greenBorderColor;
+    padding: 10px;
+    background: $darkBackground;
+    margin-bottom: 30px;
+}

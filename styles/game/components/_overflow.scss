@@ -1,0 +1,34 @@
+.c-overflow{
+    position: relative;
+
+    .static{
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 140px;
+
+        @include tablet{
+            width: 160px;
+            position: relative;
+        }
+    }
+
+    .c-table--responsive{
+        width: 500px;
+
+        @include tablet{
+            width: auto;
+        }
+    }
+}
+.c-overflow__wrapper{
+    margin-left: 104px;
+    overflow-x: scroll;
+    overflow-y: visible;
+    padding-bottom: 5px;
+
+    @include tablet{
+        margin-left: 0;
+        overflow: hidden;
+    }
+}

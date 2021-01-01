@@ -1,0 +1,25 @@
+.l-main{
+    margin: 120px 0 0;
+    position: relative;
+
+    @include tablet{
+        margin-top: 80px;
+        margin-left: 80px;
+    }
+
+    @include desktop{
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+}
+
+.l-main__planet{
+    display: none;
+
+    @include mobile{
+        position: absolute;
+        right: 0;
+        top: 25%;
+        display: block;
+    }
+}

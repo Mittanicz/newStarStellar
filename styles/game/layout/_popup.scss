@@ -1,0 +1,16 @@
+.l-popup{
+    background: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fancybox-content{
+    background: transparent !important;
+    width: 100% !important;
+    height: 100% !important;
+}

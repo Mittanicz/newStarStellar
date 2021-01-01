@@ -1,0 +1,11 @@
+.c-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 10px;
+}
+
+.c-gallery__item{
+    flex: 1 1 120px;
+    margin-left: -10px;
+}

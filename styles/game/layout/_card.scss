@@ -1,0 +1,318 @@
+.l-card{
+    min-width: 280px;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 30px;
+
+    @include mobile{
+        max-width: 500px;
+
+        &:before{
+            background: $gradientBackground;
+            content: '';
+            height: 28px;
+            left: 70%;
+            position: absolute;
+            right: 0;
+            top: 21px;
+        }
+
+        &:after{
+            background: $lightGreen;
+            content: '';
+            height: 1px;
+            left: 74%;
+            position: absolute;
+            right: 0;
+            top: 20px;
+        }
+    }
+
+    @include tablet{
+        max-width: 680px;
+
+        &:before{
+            height: 48px;
+        }
+
+        &:after{
+            left: 73%;
+        }
+    }
+
+    @include desktop{
+        max-width: 840px;
+    }
+}
+
+
+.l-card__header{
+    background: $gradientBackground;
+    border-left: 1px solid $lightGreen;
+    border-top: 1px solid $lightGreen;
+    font-size: 26px;
+    padding: 10px;
+    position: relative;
+    
+    @include mobile{  
+        font-size: 28px;  
+        max-width: 70%;
+
+        &:before{
+            content: '';
+            position: absolute;
+            right: -22px;
+            top: -2px;
+            @include triangle("bottomleft", $triangleGreen, 22px)
+        }
+
+        &:after{
+            background: $lightGreen;
+            content: '';
+            height: 1px;
+            position: absolute;
+            right: -25px;
+            top: 10px;
+            transform: rotate(45deg);
+            width: 28px;
+        }
+    }
+
+    h1{
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @include tablet{
+        padding: 20px;
+    }
+}
+
+.l-card__content{
+    background: linear-gradient(180deg, $triangleGreen 0%, $triangleGreen2 100%);
+    border: 1px solid $lightGreen;
+    border-top: 0;
+    padding: 15px;
+    position: relative;
+
+    &:before{
+        background: $lightGreen;
+        content: '';
+        height: 30px;
+        position: absolute;
+        right: -1px;
+        top: -29px;
+        width: 1px;
+    }
+
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px 20px;
+
+        &:before{
+            height: 48px;
+            top: -48px;
+        }
+    }
+}
+
+.l-card__content--lined{
+    display: block;
+}
+
+.l-card__sideBar{
+    flex: 1 1;
+    margin-left: 10px;
+}
+
+
+.l-card__content--planetView{
+    .planetImg{
+        position: relative;
+    }
+    
+    @include tablet{
+        display: grid;
+        gap: 10px 10px;
+        grid-template-areas:
+        "planetImg planetActivity"
+        "planetControl planetInfo";
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .planetImg { grid-area: planetImg; }
+    .planetInfo { grid-area: planetInfo; }
+    .planetControl { grid-area: planetControl; }
+    .planetActivity { grid-area: planetActivity; }
+}
+
+
+.l-card--center{
+    @include mobile{
+        .l-card__header{
+            text-align: center;
+            margin: 0 auto;
+            border-left: 0;
+        }
+
+        &:before{
+            left: 85%;
+        }
+
+        &:after{
+            left: 88%;
+        }
+
+        .l-card__border{
+            &:before{
+                content: '';
+                position: absolute;
+                left: -22px;
+                top: -2px;
+                @include triangle("bottomright", $triangleGreen, 22px)
+            }
+
+            &:after{
+                background: $lightGreen;
+                content: '';
+                height: 1px;
+                position: absolute;
+                left: -25px;
+                top: 10px;
+                transform: rotate(-45deg);
+                width: 28px;
+            }
+        }
+
+        .l-card__contentBorder{
+            background: linear-gradient(180deg,$triangleGreen 0,$triangleGreen 100%);
+            height: 28px;
+            left: 0;
+            position: absolute;
+            right: 85%;
+            top: -28px;
+
+            &:before{
+                background: $lightGreen;
+                content: '';
+                height: 30px;
+                position: absolute;
+                left: -1px;
+                top: 0;
+                width: 1px;
+            }
+
+            &:after{
+                background: $lightGreen;
+                content: '';
+                height: 1px;
+                position: absolute;
+                width: 72%;
+            }
+        }
+    }
+
+    @include tablet{
+        .l-card__contentBorder{
+            top: -48px;
+            height: 48px;
+
+            &:before{
+                height: 48px;
+            }
+
+            &:after{
+                width: 79%;
+            }
+        }
+    }
+}
+.l-card--alignCenter{
+    margin: 0 auto;
+}
+
+.l-card__innerContent{
+    border: 1px solid $greenBorderColor;
+    padding: 10px;
+    background: $darkBackgroundTransparent;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.l-card__innerContent--noPadd{
+    padding: 0;
+}
+
+.l-card__innerContent--info{
+    background: $gradientBackgroundDarkTranstion;
+}
+
+.l-card__innerContent--stretch{
+    flex: 1;
+}
+
+.l-card__footer{
+    bottom: -6px;
+    display: none;
+    left: 0;
+    position: relative;
+
+    @include tablet{
+        display: block;
+    }
+}
+
+.l-card__footerNav{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.l-card__footerItem{
+    &:first-child{
+        .l-card__footerLink{
+            border-left: 1px solid $lightGreen;
+        }
+    }
+
+    &:hover{
+        .l-card__footerLink{
+            background: linear-gradient(90deg, #23352e 0%, 50%,#243830 100%);
+            
+            &:before{
+                @include triangle("topleft", #243830, 26px)
+            }
+        }
+    }
+}
+
+.l-card__footerLink{
+    background:linear-gradient(90deg,#141d19 0%, 50%,#1c2b25 100%);
+    padding: 5px 25px;
+    position: relative;
+    transition: $transition;
+
+    &:before{
+        content: '';
+        position: absolute;
+        right: -25px;
+        top: 0;
+        z-index: 5;
+        @include triangle("topleft", #1c2b25, 26px)
+    }
+
+    .is-active & {
+        background: linear-gradient(90deg, #21302a 0%, 50%,#283e35 100%);
+        transition: $transition;
+
+        &:before{
+            @include triangle("topleft", #283e35, 26px)
+        }
+    }
+}

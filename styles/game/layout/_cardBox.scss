@@ -1,0 +1,36 @@
+.l-cardBox{
+    background: $gradientBackgroundDarkTranstion;
+    border: 1px solid $greenBorderColor;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    padding: 5px;
+    position: relative;
+}
+
+.l-cardBox--row{
+    flex-direction: row;
+    order: 1;
+
+    .c-visualProgress{
+        flex: 1 1;
+    }
+
+    @include desktop{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+
+        .c-visualProgress{
+            flex: 1 1 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.l-cardBox--mobileHide{
+    display: none;
+
+    @include desktop{
+        display: block;
+    }
+}

@@ -1,0 +1,12 @@
+.c-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    @include tablet{
+        display: block;
+        overflow: hidden;
+    }
+}

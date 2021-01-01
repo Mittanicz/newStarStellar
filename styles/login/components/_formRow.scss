@@ -1,0 +1,12 @@
+.c-formRow{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.c-formRow__wrapper{
+    left: 10px;
+    margin-bottom: 5px;
+    max-width: 97%;
+    position: relative;
+}

@@ -1,0 +1,39 @@
+.c-rangeSlider{
+    position: relative;
+}
+
+.c-rangeSlider__slider{
+    background: none;
+    border: none;
+    margin: 4.3px 0;
+    width: 100%;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-runnable-track {
+        background: #404642;
+        cursor: pointer;
+        height: 2px;
+        width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+        background: transparent;
+        border-radius: 50%;
+        border: 2px solid white;
+        cursor: pointer;
+        height: 16px;
+        margin-top: -7px;
+        width: 16px;
+        -webkit-appearance: none;
+    }
+}
+
+.c-rangeSlider__bubble{
+    background: $darkBackgroundTransparent;
+    color: white;
+    left: 50%;
+    padding: 4px 12px;
+    position: absolute;
+    top: -22px;
+    transform: translateX(-50%);
+}

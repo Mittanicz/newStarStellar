@@ -1,0 +1,34 @@
+
+.c-planetImg{
+    position: relative;
+}
+
+.c-planetImg__moon{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5px;
+    background: linear-gradient(180deg,rgba(22,31,26,.4) 0,rgba(22,31,26,.4) 100%);
+    
+    img{
+        width: 40px;
+        margin: 0 auto;
+    }
+
+    @include mobile{
+        img{
+            width: 60px;
+        }
+    }
+
+    @include tablet{
+        width: auto;
+    }
+}
+
+.c-planetImg__moonText{
+    margin-top: 5px;
+}

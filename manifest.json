@@ -1,0 +1,23 @@
+{
+  "short_name": "New-Star",
+  "name": "New-Star",
+  "description": "New-Star",
+  "author": "Yaro2709",
+  "categories": ["game"],
+  "icons": [
+  ],
+  "start_url": "/index.php",
+  "background_color": "#010e16",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#010e16",
+  "prefer_related_applications": false,
+  "serviceworker": {
+	  "src": "/manifest.js",
+	  "type": "",
+	  "update_via_cache": "none"
+    },
+  "shortcuts": [
+
+  ]
+}

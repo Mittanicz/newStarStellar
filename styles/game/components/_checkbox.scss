@@ -1,0 +1,78 @@
+.c-checkbox{
+    cursor: pointer;
+    display: flex;
+    font-weight: 400;
+    padding: 5px 0;
+    text-transform: none;
+    flex-wrap: wrap;
+
+    &.is-error{
+        border: 2px solid red;
+        padding: 10px;
+    }
+
+    &[disabled]{
+        cursor: not-allowed;
+
+        .c-checkbox__span{
+            background: $lighterGreen;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.c-checkbox__over{
+    display: inline-block;
+
+    & + .c-checkbox__text{
+        margin-left: 10px;
+    }
+}
+
+.c-checkbox__text{
+    color: $white;
+
+    & + .c-checkbox__over{
+        margin-left: 10px;
+    }
+}
+
+.c-checkbox__input{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+
+    & + .c-checkbox__span{
+        background-color: $black;
+        border: 1px solid  $lighterGreen;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 12px;
+        height: 16px;
+        line-height: 16px;
+        margin-top: -2px;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        width: 16px;
+
+        .is-error &{
+            border: 1px solid red
+        }
+    }
+
+    &:checked + .c-checkbox__span{
+        border-color: $lighterGreen;
+
+        &:before{
+            background: $black url("../../img/game/icons/checkmark.svg") no-repeat center;
+            content: '';
+            display: inline-block;
+            height: 14px;
+            left: 0;
+            position: relative;
+            top: 0;
+            width: 14px;
+        }
+    }
+}

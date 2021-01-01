@@ -1,0 +1,11 @@
+.c-message{
+    border: 1px solid $greenBorderColor;
+    margin-bottom: 5px;
+}
+
+.c-message__header{
+    border-bottom: 1px solid $greenBorderColor;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}

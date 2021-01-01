@@ -1,0 +1,78 @@
+.c-input{
+    border: 1px solid $greenBorderColor;
+    background: $darkBackgroundTransparent;
+    font-size: 14px;
+    color: $white;
+    filter: none;
+    padding: 5px 10px;    
+    width: 100%;
+    transition: $transition;
+
+	&:required,
+	&:-moz-ui-invalid{
+		box-shadow: none;
+
+		&:focus{
+            border: 1px solid $lighterGreen;
+            transition: $transition;
+        }
+    }
+    
+	&:-internal-autofill-previewed,
+	&:-internal-autofill-selected,
+	&:-webkit-autofill{
+		background-color: $inputBackground !important;
+		border: none !important;
+		-webkit-box-shadow: 0 0 0 100px $inputBackground inset;
+    }
+}
+
+.c-input__before{
+    position: absolute;
+    background: $inputBackground;
+    left: -10px;
+    height: 32px;
+    width: 10px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        @include triangle("topright", $inputBackground, 10px)
+    }
+}
+
+.c-input__after{
+    position: absolute;
+    background: $inputBackground;
+    right: -10px;
+    height: 32px;
+    width: 10px;
+    top: 9px;
+
+    &:before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -10px;
+        @include triangle("bottomleft", $inputBackground, 10px)
+    }
+}
+
+.c-input__text{
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.c-inputTextArea{
+    background: $black;
+    border: 1px solid $greenBorderColor;
+    color: $white;
+    padding: 5px;
+    width: 100%;
+
+    &::placeholder{
+        color: $white;
+    }
+}
